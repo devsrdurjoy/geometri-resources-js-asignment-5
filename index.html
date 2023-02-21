@@ -28,19 +28,20 @@
     </header>
     <main>
          <section>
-            <div class="Geometri-info mt-5 lg:px-12 flex">
-                <div class="w-[70%] grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div class="Geometri-info mt-5 lg:px-12 flex flex-col md:flex-row lg:flex-row">
+                <div class="w-full md:w-[70%] lg:w-[70%] grid md:grid-cols-2 lg:grid-cols-3 gap-6">
                   <div class="card w-full bg-base-100 shadow-xl">
                     <figure class="px-10 pt-10">
                       <img src="/images/triangle.png" alt="triangle" class="rounded-xl" />
                     </figure>
                     <div class="card-body items-center text-center">
-                      <h2 class="card-title">Triangle</h2>
-                      <p>Area(A) = <span>0.5*b*h</span></p>
-                      <input placeholder="value" type="input"/>cm
-                      <input placeholder="value" type="input"/>cm
+                      <h2 id="triangle-title"class="card-title">Triangle</h2>
+                      <p>Area(A) = <span id="triangle-area">0.5*b*h</span></p>
+                    
+                      <input id="triangle-b-input" type="text" placeholder="cm" class="input input-bordered input-sm w-full max-w-xs" />
+                      <input id="triangle-h-input" type="text" placeholder="cm" class="input input-bordered input-sm w-full max-w-xs" />
                       <div class="card-actions">
-                        <button class="btn btn-primary">Calculation</button>
+                        <button id="triangle-button"class="btn btn-primary">Calculation</button>
                       </div>
                     </div>
                   </div>
@@ -116,41 +117,22 @@
                   </div>
                  
                 </div>
-                <div class="Geometri-Calculation w-[30%]">
+                <div class="Geometri-Calculation w-full md:w-[30%] lg:w-[30%] mx-auto">
                   <div class="overflow-x-auto">
-                    <table class="table w-full">
+                    <table class="table">
                       <!-- head -->
                       <thead>
-                        <h1 class="text-center">Total Calculation</h1>
+                        <h1 class="text-center mb-2 underline text-xl mx-auto">Total Calculation</h1>
                         <tr>
-                          <th></th>
                           <th>Name</th>
-                          <th>Job</th>
-                          <th>Favorite Color</th>
+                          <th>Width</th>
+                          <th>Height</th>
+                          <th>Area</th>
                         </tr>
                       </thead>
-                      <tbody>
+                      <tbody id="tableData">
                         <!-- row 1 -->
-                        <tr>
-                          <th>1</th>
-                          <td>Cy Ganderton</td>
-                          <td>Quality Control Specialist</td>
-                          <td>Blue</td>
-                        </tr>
-                        <!-- row 2 -->
-                        <tr class="active">
-                          <th>2</th>
-                          <td>Hart Hagerty</td>
-                          <td>Desktop Support Technician</td>
-                          <td>Purple</td>
-                        </tr>
-                        <!-- row 3 -->
-                        <tr>
-                          <th>3</th>
-                          <td>Brice Swyre</td>
-                          <td>Tax Accountant</td>
-                          <td>Red</td>
-                        </tr>
+              
                       </tbody>
                     </table>
                   </div>
